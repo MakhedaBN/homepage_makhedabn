@@ -1,0 +1,355 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Have root colors */
+:root {
+    --background: #2563eb;
+    --second-background: #475569;
+    --text-color: #0f172a;
+    --main-color: #2563eb;
+    --main-color-soft: rgba(37, 99, 235, 0.15);
+    --card: #ffffff;
+    --card-soft: #a5b4fc;
+}
+
+/* HTML body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text-color);
+    padding-top: 90px;
+}
+
+/* Navbar */
+.nav_bar {
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 18px rgba(15, 23, 40, 0.15);
+
+}
+
+/* Web logo */
+.main {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: blue;
+}
+
+/* Let`s style the the menu */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4682B4;
+    font-weight: 650;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    border-radius: 999px;
+    transition: 0.25s ease;
+}
+
+.menu a:hover {
+    background: var(--main-color-soft);
+    color: var(--main-color);
+}
+
+#menu {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    color: var(--text-color);
+}
+
+
+/* Let`s style the pictures */
+.image {
+    width: 90%;
+    max-width: 700px;
+    margin: 25px auto 0;
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--card-soft);
+    box-shadow: 0 10px 25px rgba(15, 23, 40, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.picture {
+    width: 90%;
+    max-width: 500px;
+    margin: 25px auto 0;
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--card-soft);
+    box-shadow: 0 10px 25px rgba(15, 23, 40, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+}
+
+.picture img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Let`s style the headers */
+.header {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    background: var(--card-soft);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(15, 23, 40, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+    text-align: center;
+
+}
+
+.header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(15, 23, 40, 0.65);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    margin-top: 8px;
+    line-height: 1.2;
+
+}
+
+/* Let`s style the paragraphs */
+.paragraph {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    background: var(--card-soft);
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(15, 23, 40, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+    text-align: center;
+
+}
+
+.paragraph p {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+/* Let`s style footer */
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 20px 15px;
+    text-align: center;
+    margin: 50px auto 25px;
+    color: #1f2937;
+    font-size: 1rem;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+
+/* Contacts and socials */
+
+.contacts {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 20px;
+    border-radius: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 650;
+    font-size: 0.95rem;
+    padding: 10px 60px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(15, 23, 40, 0.12);
+    transition: 0.25s ease;
+
+}
+
+.contacts a:hover {
+
+    background: var(--main-color);
+    color: white;
+    transform: translateY(-2px);
+
+}
+
+.skills {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 700px;
+    margin: 30px auto 0;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 2px rgba(15, 23, 40, 0.20);
+    border: 1px solid rgba(15, 23, 40, 0.1);
+    display: block;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    text-align: left;
+}
+
+.skills p {
+    font-size: 1.5rem;
+    color: #1f2937;
+}
+
+.skills table {
+    padding: 5px 10px;
+    border-collapse: separate;
+    border-spacing: 12px;
+
+}
+
+.skills td {
+    padding: 5px 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px;
+    color: #1f2937;
+    background-color: #6495ED;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skills td:hover {
+    background-color: #87CEEB;
+    cursor: pointer;
+}
+
+.education ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.education li {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-bottom: 4px;
+}
+
+#edu {
+    font-size: 1.5rem;
+    color: #1f2937;
+}
+
+
+/* Mobile and desktop views  */
+@media (max-width: 768px) {
+
+    #menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 15px;
+        width: 260px;
+        box-shadow: 0 10px 25px rgba(15, 23, 40, 0.2);
+        z-index: 2000;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    .picture img {
+        height: 500px;
+    }
+
+    .contacts a {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    flex: 1 1 auto; 
+    text-align: center;
+    }
+
+    .contacts {
+        justify-content: center;
+    }
+    .skills td {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+
+
+}
